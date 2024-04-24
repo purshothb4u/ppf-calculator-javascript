@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PPF CALCULATOR</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+  </head>
+  <body id="body">
+    <div
+      class="container bg-info d-flex justify-content-center py-3 rounded"
+      id="container"
+    >
+      <div class="row">
+        <div class="col">
+          <h1 class="text-center mt-3 pb-2" id="head">PPF CALCULATOR</h1>
+          <form action="" method="get" id="ppfForm" novalidate>
+            <div class="form-group my-3">
+              <div class="row">
+                <div class="col-5">
+                  <label for="yearInvest" class="form-label"
+                    >Yearly Investment
+                  </label>
+                </div>
+                <div class="col-6">
+                  <input
+                    type="number"
+                    class="form control ms-2 rounded border-info text-center"
+                    id="yearInvest"
+                    step="500"
+                    placeholder="min 500rs"
+                  />
+                  <div
+                    class="ms-3" id="invalid1"
+                    style="display:none ; color: red; font-weight: bold"
+                  >
+                    *Minimum 500rs
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group my-3">
+              <div class="row">
+                <div class="col-5">
+                  <label for="timePeriod" class="form-label"
+                    >Time Period (yrs)</label
+                  >
+                </div>
+                <div class="col-6">
+                  <input
+                    type="number"
+                    class="form control ms-2 rounded border-info text-center"
+                    id="timePeriod"
+                    placeholder="min 15 yrs"
+                    
+                  />
+                  <div
+                    class="ms-3" id="invalid2"
+                    style="display:none ; color: red; font-weight: bold"
+                  >
+                    *Minimum 15 yrs
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group my-3">
+              <div class="row">
+                <div class="col-5">
+                  <label for="roi" class="form-label">Rate of Interest </label>
+                </div>
+                <div class="col-6">
+                  <input
+                    type="text"
+                    class="form control ms-2 text-center rounded border-info"
+                    id="roi"
+                    value="7.1%"
+                    readonly
+                  />
+                </div>
+              </div>
+            </div>
+
+            <center>
+              <button
+                type="submit"
+                class="btn btn-primary px-4 pb-2 my-2"
+                onclick="calculate()"
+              >
+                Calculate
+              </button>
+              <button
+                type="reset"
+                class="btn btn-danger px-4 pb-2 my-2 mx-3" 
+                onclick="clearValues()"
+              >
+                Clear
+              </button>
+            </center>
+
+            <div class="row my-3 mx-3">
+              <div class="col-6">Invested amount</div>
+              <div class="col-6" id="investAmount"></div>
+            </div>
+
+            <div class="row my-3 mx-3">
+              <div class="col-6">Total interest</div>
+              <div class="col-6" id="totalInterest"></div>
+            </div>
+
+            <div class="row my-3 mx-3">
+              <div class="col-6">Maturity value</div>
+              <div class="col-6" id="maturityAmount"></div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

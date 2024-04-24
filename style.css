@@ -1,0 +1,36 @@
+#body {
+  background-color: rgb(160, 228, 228);
+}
+
+#container {
+  height: 60vh;
+  width: 65vw;
+  max-width: 400px;
+  min-width: 360px;
+  max-height: 800px;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  right: 20%;
+  bottom: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid black;
+  box-shadow: -2px -2px 7px black;
+}
+/* #head {
+  color: #10439F;
+} */
+
+/* .form-group{
+    display: flex;
+    
+}
+.form-group label{
+    justify-content: end;
+    width: 70%;
+}
+.form-group input{
+    justify-content: end;
+    width: 70%;
+} */
